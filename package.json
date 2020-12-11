@@ -1,0 +1,17 @@
+{
+  "name": "directus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "directus start",
+    "bootstrat": "directus bootstrap"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "directus": "^9.0.0-rc.22",
+    "pg": "^8.5.1"
+  }
+}
