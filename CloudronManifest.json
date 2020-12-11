@@ -1,9 +1,22 @@
 {
-  "version": "0.1.0",
+  "id": "com.consalsa.directus9",
+  "title": "Directus 9",
+  "author": "Oscar Eg Gensmann <oscar@consalsa.dk>",
+  "description": "An Instant App & API for your SQL Database",
+  "tagline": "An Instant App & API for your SQL Database",
+  "version": "0.5.0",
   "healthCheckPath": "/",
-  "httpPort": 3000,
+  "httpPort": 8055,
   "addons": {
-    "localstorage": {}
+    "localstorage": {},
+    "postgresql": {},
+    "redis": {},
+    "sendmail": {}
   },
- "manifestVersion": 2
+  "manifestVersion": 2,
+  "website": "https://www.directus.io",
+  "contactEmail": "oscar@consalsa.dk",
+  "icon": "file://icon.png",
+  "tags": [ "cms", "database" ],
+  "mediaLinks": []
 }
