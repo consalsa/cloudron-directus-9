@@ -8,7 +8,8 @@ ADD package.json start.sh /app/code/
 ADD extensions/ /app/data/extensions/
 ADD pm2.process.js /app/data/
 
-RUN ln -s '/home/cloudron/.pm2' '/app/data/.pm2'
+RUN mkdir -p '/app/data/.pm2'
+RUN ln -s '/home/cloudron/.pm2/' '/app/data/.pm2/'
 
 # PM2
 RUN npm install pm2 -g
