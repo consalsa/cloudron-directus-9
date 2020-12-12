@@ -5,7 +5,10 @@ WORKDIR /app/code
 
 # copy code
 ADD package.json start.sh /app/code/
-ADD setenv.sh extensions /app/data/
+ADD extensions/ /app/data/extensions/
+ADD setenv.sh /app/data/
+
+RUN chmod +x /app/data/setenv.sh
 
 # install packages
 RUN npm install
