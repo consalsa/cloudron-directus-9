@@ -6,7 +6,7 @@ set -eu
 chown -R cloudron:cloudron /app/data
 
 export PORT=8055
-export PUBLIC_URL="/api/"
+export PUBLIC_URL="/"
 export LOG_LEVEL="info"
 export LOG_STYLE="pretty"
        
