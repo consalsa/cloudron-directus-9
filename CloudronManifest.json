@@ -4,7 +4,7 @@
   "author": "Oscar Eg Gensmann <oscar@consalsa.dk>",
   "description": "An Instant App & API for your SQL Database",
   "tagline": "An Instant App & API for your SQL Database",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "healthCheckPath": "/",
   "httpPort": 8055,
   "configurePath": "/admin/",
