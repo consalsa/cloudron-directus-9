@@ -10,91 +10,91 @@ chown -R cloudron:cloudron /app/data
 ####################################################################################################
 # General
 
-cloudron env PORT=8055
-cloudron env PUBLIC_URL="/"
-cloudron env LOG_LEVEL="info"
-cloudron env LOG_STYLE="pretty"
+PORT=8055
+PUBLIC_URL="/"
+LOG_LEVEL="info"
+LOG_STYLE="pretty"
 
 ####################################################################################################
 # Database
 
-cloudron env DB_CLIENT="pg"
-cloudron env DB_HOST="$CLOUDRON_POSTGRESQL_HOST"
-cloudron env DB_PORT=$CLOUDRON_POSTGRESQL_PORT
-cloudron env DB_DATABASE="$CLOUDRON_POSTGRESQL_DATABASE"
-cloudron env DB_USER="$CLOUDRON_POSTGRESQL_USERNAME"
-cloudron env DB_PASSWORD="$CLOUDRON_POSTGRESQL_PASSWORD"
+DB_CLIENT="pg"
+DB_HOST="$CLOUDRON_POSTGRESQL_HOST"
+DB_PORT=$CLOUDRON_POSTGRESQL_PORT
+DB_DATABASE="$CLOUDRON_POSTGRESQL_DATABASE"
+DB_USER="$CLOUDRON_POSTGRESQL_USERNAME"
+DB_PASSWORD="$CLOUDRON_POSTGRESQL_PASSWORD"
 
 ####################################################################################################
 # Rate Limiting
 
-cloudron env RATE_LIMITER_ENABLED=true
+RATE_LIMITER_ENABLED=true
 
-cloudron env RATE_LIMITER_POINTS=50
-cloudron env RATE_LIMITER_DURATION=1
+RATE_LIMITER_POINTS=50
+RATE_LIMITER_DURATION=1
 
-cloudron env RATE_LIMITER_STORE=redis
+RATE_LIMITER_STORE=redis
 
-cloudron env RATE_LIMITER_EXEC_EVENLY=false
-cloudron env RATE_LIMITER_BLOCK_DURATION=0
-cloudron env RATE_LIMITER_KEY_PREFIX=rlflx
+RATE_LIMITER_EXEC_EVENLY=false
+RATE_LIMITER_BLOCK_DURATION=0
+RATE_LIMITER_KEY_PREFIX=rlflx
 
-cloudron env RATE_LIMITER_REDIS="$CLOUDRON_REDIS_URL"
+RATE_LIMITER_REDIS="$CLOUDRON_REDIS_URL"
 
 ####################################################################################################
 # Caching
 
-cloudron env CACHE_ENABLED=true
-cloudron env CACHE_TTL="10m"
-cloudron env CACHE_NAMESPACE="directus-cache"
-cloudron env CACHE_STORE=redis
+CACHE_ENABLED=true
+CACHE_TTL="10m"
+CACHE_NAMESPACE="directus-cache"
+CACHE_STORE=redis
 
-cloudron env CACHE_REDIS="$CLOUDRON_REDIS_URL"
+CACHE_REDIS="$CLOUDRON_REDIS_URL"
 
 ####################################################################################################
 # File Storage
 
-cloudron env STORAGE_LOCATIONS="local"
-cloudron env STORAGE_LOCAL_PUBLIC_URL="/files"
-cloudron env STORAGE_LOCAL_DRIVER="local"
-cloudron env STORAGE_LOCAL_ROOT="/app/data/files"
+STORAGE_LOCATIONS="local"
+STORAGE_LOCAL_PUBLIC_URL="/files"
+STORAGE_LOCAL_DRIVER="local"
+STORAGE_LOCAL_ROOT="/app/data/files"
 
 ####################################################################################################
 # Security
 
-cloudron env KEY="70E419CF-F7C4-431E-925B-661E44D01088"
-cloudron env SECRET="E2F001F9-6BCD-4858-BB4F-8CE2D2886F56"
-cloudron env ACCESS_TOKEN_TTL="15m"
-cloudron env REFRESH_TOKEN_TTL="7d"
-cloudron env REFRESH_TOKEN_COOKIE_SECURE="false"
-cloudron env REFRESH_TOKEN_COOKIE_SAME_SITE="lax"
+KEY="70E419CF-F7C4-431E-925B-661E44D01088"
+SECRET="E2F001F9-6BCD-4858-BB4F-8CE2D2886F56"
+ACCESS_TOKEN_TTL="15m"
+REFRESH_TOKEN_TTL="7d"
+REFRESH_TOKEN_COOKIE_SECURE="false"
+REFRESH_TOKEN_COOKIE_SAME_SITE="lax"
 
-cloudron env CORS_ENABLED="true"
-cloudron env CORS_ORIGIN=*
-cloudron env CORS_METHODS=GET,POST,PATCH,DELETE
-cloudron env CORS_ALLOWED_HEADERS=Content-Type,Authorization
-cloudron env CORS_EXPOSED_HEADERS=Content-Range
-cloudron env CORS_CREDENTIALS="true"
-cloudron env CORS_MAX_AGE=18000
+CORS_ENABLED="true"
+CORS_ORIGIN=*
+CORS_METHODS=GET,POST,PATCH,DELETE
+CORS_ALLOWED_HEADERS=Content-Type,Authorization
+CORS_EXPOSED_HEADERS=Content-Range
+CORS_CREDENTIALS="true"
+CORS_MAX_AGE=18000
 
 ####################################################################################################
 # Extensions
 
-cloudron env EXTENSIONS_PATH="/app/data/extensions"
+EXTENSIONS_PATH="/app/data/extensions"
 
 ####################################################################################################
 # Email
 
-cloudron env EMAIL_FROM="$CLOUDRON_MAIL_FROM"
-cloudron env EMAIL_TRANSPORT="smtp"
+EMAIL_FROM="$CLOUDRON_MAIL_FROM"
+EMAIL_TRANSPORT="smtp"
 
 ## Email (SMTP Transport)
-cloudron env EMAIL_SMTP_POOL=true
-cloudron env EMAIL_SMTP_HOST="$CLOUDRON_MAIL_SMTP_SERVER"
-cloudron env EMAIL_SMTP_PORT=$CLOUDRON_MAIL_SMTPS_PORT
-cloudron env EMAIL_SMTP_SECURE=true
-cloudron env EMAIL_SMTP_USER="$CLOUDRON_MAIL_SMTP_USERNAME"
-cloudron env EMAIL_SMTP_PASSWORD="$CLOUDRON_MAIL_SMTP_PASSWORD"
+EMAIL_SMTP_POOL=true
+EMAIL_SMTP_HOST="$CLOUDRON_MAIL_SMTP_SERVER"
+EMAIL_SMTP_PORT=$CLOUDRON_MAIL_SMTPS_PORT
+EMAIL_SMTP_SECURE=true
+EMAIL_SMTP_USER="$CLOUDRON_MAIL_SMTP_USERNAME"
+EMAIL_SMTP_PASSWORD="$CLOUDRON_MAIL_SMTP_PASSWORD  "
 
 # Run bootstrap
 exec npm run bootstrap
