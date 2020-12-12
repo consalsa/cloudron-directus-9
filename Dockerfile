@@ -15,4 +15,3 @@ ADD supervisor/* /etc/supervisor/conf.d/
 RUN ln -sf /run/supervisord.log /var/log/supervisor/supervisord.log
 
 CMD [ "/app/code/start.sh" ]
-
