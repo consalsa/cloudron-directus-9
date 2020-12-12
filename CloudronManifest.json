@@ -17,7 +17,7 @@
   "manifestVersion": 2,
   "website": "https://www.directus.io",
   "contactEmail": "oscar@consalsa.dk",
-  "icon": "",
+  "icon": "file://icon.png",
   "tags": [ "cms", "database" ],
   "mediaLinks": []
 }
