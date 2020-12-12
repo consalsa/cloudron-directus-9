@@ -96,6 +96,12 @@ EMAIL_SMTP_SECURE=true
 EMAIL_SMTP_USER="$CLOUDRON_MAIL_SMTP_USERNAME"
 EMAIL_SMTP_PASSWORD="$CLOUDRON_MAIL_SMTP_PASSWORD"
 
+if [[ -f /app/data/.env ]]; then
+  echo "copy .env"
+  cp /app/data/.env /app/code
+  echo "Done."
+fi
+
 # Run bootstrap
 exec npm run bootstrap
 
