@@ -58,7 +58,7 @@ export EXTENSIONS_PATH="/app/data/extensions"
 export EMAIL_FROM="$CLOUDRON_MAIL_FROM" 
 export EMAIL_TRANSPORT="smtp" 
        
-export EMAIL_SMTP_POOL=true
+export EMAIL_SMTP_POOL=false
 export EMAIL_SMTP_HOST="$CLOUDRON_MAIL_SMTP_SERVER"
 export EMAIL_SMTP_PORT="$CLOUDRON_MAIL_SMTP_PORT"
 export EMAIL_SMTP_SECURE=false
