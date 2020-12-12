@@ -5,7 +5,12 @@ set -eu
 # ensure that data directory is owned by 'cloudron' user
 chown -R cloudron:cloudron /app/data
 
+if [[ ! -f /app/data/directus/.env ]]; then
+  echo "copy .env"  
+  cp /app/data/directus/example.env  /app/data/directus/.env
+  echo "Done."
+fi
 
-echo "==> Starting PM2"
-exec /usr/local/bin/gosu cloudron:cloudron npx pm2-runtime start /app/data/pm2.process.js
+echo "==> Starting"
+exec /usr/local/bin/gosu cloudron:cloudron npm start
 
