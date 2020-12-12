@@ -5,8 +5,8 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sh setenv.sh && directus start",
-    "bootstrap": "sh setenv.sh && directus bootstrap"
+    "start": "directus start",
+    "bootstrap": "directus bootstrap"
   },
   "author": "",
   "license": "ISC",
