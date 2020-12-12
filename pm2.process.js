@@ -3,9 +3,8 @@ let output = {
     {
       name: "directus",
       script: "directus start",
-      cwd: "/app/code",
-      error_file: '/app/data/logs/err.log',
-      out_file: '/app/data/logs/out.log',
+      cwd: "/app/code/",
+      watch: "/app/data/extensions",
       time: true,
       env: {
         NODE_ENV: "development",
@@ -14,7 +13,7 @@ let output = {
         LOG_LEVEL : "info",
         LOG_STYLE : "pretty",
        
-        DB_CLIENT : "pg",
+        DB_CLIENT : "pg", 
         DB_HOST : process.env.CLOUDRON_POSTGRESQL_HOST,
         DB_PORT : process.env.CLOUDRON_POSTGRESQL_PORT,
         DB_DATABASE : process.env.CLOUDRON_POSTGRESQL_DATABASE,
