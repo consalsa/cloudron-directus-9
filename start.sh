@@ -6,6 +6,6 @@ set -eu
 chown -R cloudron:cloudron /app/data
 
 
-echo "==> Starting supervisor"
-exec /usr/bin/supervisord --configuration /etc/supervisor/supervisord.conf --nodaemon -i SupervisorExampleApp
+echo "==> Starting PM2"
+exec /usr/local/bin/gosu cloudron:cloudron pm2 start /app/data/pm2.process.js
 

@@ -6,15 +6,12 @@ WORKDIR /app/code
 # copy code
 ADD package.json start.sh /app/code/
 ADD extensions/ /app/data/extensions/
-ADD setenv.sh /app/data/
+ADD pm2.process.js /app/data/
 
-RUN chmod +x /app/data/setenv.sh
+# PM2
+RUN npm install pm2 -g
 
 # install packages
 RUN npm install
-
-# add supervisor configs
-ADD supervisor/* /etc/supervisor/conf.d/
-RUN ln -sf /run/supervisord.log /var/log/supervisor/supervisord.log
 
 CMD [ "/app/code/start.sh" ]
