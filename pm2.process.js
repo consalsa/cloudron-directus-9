@@ -4,6 +4,9 @@ let output = {
       name: "directus",
       script: "directus start",
       cwd: "/app/code",
+      error_file: '/app/data/logs/err.log',
+      out_file: '/app/data/logs/out.log',
+      time: true,
       env: {
         NODE_ENV: "development",
         PORT : 8055,
