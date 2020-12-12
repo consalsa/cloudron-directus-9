@@ -70,8 +70,8 @@ export ADMIN_PASSWORD="changeme123"
 
 if [[ ! -f /app/data/.initialized ]]; then
   echo "Fresh installation, setting up data directory..."
-  exec /usr/local/bin/gosu cloudron:cloudron npx directus bootstrap
   touch /app/data/.initialized
+  exec /usr/local/bin/gosu cloudron:cloudron npx directus bootstrap  
   echo "Done."
 fi
 

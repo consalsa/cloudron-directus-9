@@ -5,7 +5,7 @@
   "description": "An Instant App & API for your SQL Database",
   "tagline": "An Instant App & API for your SQL Database",
   "version": "0.6.6",
-  "healthCheckPath": "/",
+  "healthCheckPath": "/admin/",
   "httpPort": 8055,
   "configurePath": "/admin/",
   "addons": {
